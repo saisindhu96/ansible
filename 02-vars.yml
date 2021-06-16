@@ -10,4 +10,4 @@
         vars:
           URL: task.example.com
         debug:
-          msg: url = {{ URL }}
+          msg: URL = {{ URL }}
