@@ -12,7 +12,7 @@
         debug:
           msg: URL = {{ URL }}
 -  name: Demo on variables from files
-   host: all
+   hosts: all
    vars_files:
      - example-vars.yml
    tasks:
