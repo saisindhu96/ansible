@@ -29,3 +29,9 @@
       -  name: Print variable
          debug:
            msg: URL == {{ URL }}
+-  name: Demoon variables from inventory
+   hosts: all
+   tasks:
+     -  name: Print variable
+        debug:
+          msg: URL == {{ URL }}
