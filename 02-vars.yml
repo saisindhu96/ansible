@@ -11,6 +11,7 @@
           URL: task.example.com
         debug:
           msg: URL = {{ URL }}
+
 -  name: Demo on variables from files
    hosts: all
    vars_files:
@@ -19,6 +20,7 @@
      -  name: Print variable
         debug:
           msg: URL == {{ URL }}
+
 -  name: Demo on variables from user input
    hosts: all
    vars_prompt:
@@ -29,15 +31,24 @@
       -  name: Print variable
          debug:
            msg: URL == {{ URL }}
+
 -  name: Demo on variables from inventory
    hosts: all
    tasks:
      -  name: Print variable
         debug:
           msg: URL == {{ URL }}
+
 -  name: Print fact
    hosts: all
    tasks:
      -  name: Print fact
         debug:
           msg: Pythone Version = {{ ansible_pythone_version }}
+
+-  name: Register a variable
+   hosts: all
+   tasks:
+     -  name: Grab how many usrs are logged in
+
+
