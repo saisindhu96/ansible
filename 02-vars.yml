@@ -38,6 +38,6 @@
 -  name: Print fact
    hosts: all
    tasks:
-     - name: print fact
+     -  name: print fact
         debug:
           msg: Pythone version = {{ ansible_pythone_version }}
