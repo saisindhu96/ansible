@@ -35,3 +35,9 @@
      -  name: Print variable
         debug:
           msg: URL == {{ URL }}
+-  name: Print fact
+   hosts: all
+   tasks:
+     -  name: print fact
+        debug:
+          msg: pythone version = {{ ansible_pythone_version }}
