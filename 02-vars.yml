@@ -19,7 +19,7 @@
      -  name: Print variable
         debug:
           msg: URL == {{ URL }}
--  name: Demoon variables from user input
+-  name: Demo on variables from user input
    hosts: all
    vars_prompt:
      -  name: URL
@@ -29,7 +29,7 @@
       -  name: Print variable
          debug:
            msg: URL == {{ URL }}
--  name: Demoon variables from inventory
+-  name: Demo on variables from inventory
    hosts: all
    tasks:
      -  name: Print variable
@@ -40,4 +40,4 @@
    tasks:
      -  name: Print fact
         debug:
-          msg: Pythone version = {{ ansible_pythone_version }}
+          msg: Pythone Version = {{ ansible_pythone_version }}
