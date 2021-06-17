@@ -50,5 +50,11 @@
    hosts: all
    tasks:
      -  name: Grab how many usrs are logged in
+        shell: who | wc -l
+        register: out
+
+     -   name: Print Out
+         debug:
+            mes: Output = {{ out }}
 
 
