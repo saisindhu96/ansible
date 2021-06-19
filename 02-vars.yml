@@ -57,10 +57,10 @@
          debug:
             mes: Number of users Logged in = {{ out.stdout }}
 
-    -  name: Declare a variable
+     -  name: Declare a variable
          set_fact:
           - NO_OF_USERS: "{{ out.stdout }}"
-    -  name: Print No of users from a new var
+     -  name: Print No of users from a new var
          debug:
             mes: "{{ NO_OF_USERS }}"
 
