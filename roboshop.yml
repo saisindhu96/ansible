@@ -1,0 +1,13 @@
+- name: Setup roboshop project
+  hosts: FRONTEND
+  roles:
+    - name: Load frontend Role
+      role: frontend
+
+
+#- name: Setup roboshop project
+#  hosts: MONGODB
+#  roles:
+#   - name: Load frontend Role
+#      role: mongodb
+
