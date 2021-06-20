@@ -1,5 +1,5 @@
 - name: Demo on vars
   hosts: all
   roles:
-    - name: Sample Role
+    - name: sample Role
       role: sample
