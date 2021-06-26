@@ -1,4 +1,4 @@
-- name: Demo on Playboook
+- name: Demo on Playbook
   hosts: all
   tasks:
     - name: Print Hello World
