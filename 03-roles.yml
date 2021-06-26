@@ -1,7 +1,7 @@
 - name: Demo on vars
-  debug:
   hosts: all
   roles:
     - name: Sample Role
+      debug:
       role: sample
 
