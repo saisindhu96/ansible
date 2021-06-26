@@ -2,7 +2,7 @@
   hosts: FRONTEND
   become: yes
   roles:
-    - name: Load frontend Role
+    - name: Load Frontend Role
       role: frontend
 
 
