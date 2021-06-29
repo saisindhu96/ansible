@@ -1,16 +1,16 @@
-- name: Setup roboshop project
-  hosts: FRONTEND
-  become: yes
-  roles:
-    - name: Load Frontend Role
-      role: frontend
-
-
-
-
 #- name: Setup roboshop project
-#  hosts: MONGODB
+#  hosts: FRONTEND
+#  become: yes
 #  roles:
-#   - name: Load frontend Role
-#      role: mongodb
+#   - name: Load Frontend Role
+#     role: frontend
+
+
+
+
+- name: Setup roboshop project
+  hosts: MONGODB
+  roles:
+   - name: Load MongoDb Role
+      role: mongodb
 
