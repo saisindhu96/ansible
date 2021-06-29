@@ -3,5 +3,12 @@
     name: nginx
     state: present
 
+- name: Start Nginx
+  ansible.builtin.systemd:
+    state: Started
+    name: nginx
+    enabled: yes
+
+
 
 
