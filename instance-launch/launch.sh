@@ -8,14 +8,14 @@ if [ -z "${COMPONENT}" ]; then
   exit 1
 fi
 
-LID=lt-0a12530ba2d8631ab
+LID=lt-0b72827b0db69bd4
 LVER=1
 
 ## Validate If Instance is already there
 DNS_UPDATE() {
   PRIVATEIP=$(aws --region us-east-1 ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}"  | jq .Reservations[].Instances[].PrivateIpAddress | xargs -n1)
   sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IPADDRESS/${PRIVATEIP}/" record.json >/tmp/record.json
-  aws route53 change-resource-record-sets --hosted-zone-id Z09197723I40S5UZUMAJ5  --change-batch file:///tmp/record.json | jq
+  aws route53 change-resource-record-sets --hosted-zone-id Z0724247R4KE3AIA5B4P  --change-batch file:///tmp/record.json | jq
 }
 
 INSTANCE_CREATE(){
