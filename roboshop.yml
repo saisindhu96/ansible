@@ -1,10 +1,11 @@
 - name: Setup roboshop project
   hosts: FRONTEND
-  debug:
   become: yes
   roles:
     - name: Load Frontend Role
+      debug:
       role: frontend
+
 
 
 
