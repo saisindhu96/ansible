@@ -3,7 +3,7 @@
   become: yes
   roles:
     - name: Load Frontend Role
-      role: frontend
+      role: Frontend
 
 
 
