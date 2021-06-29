@@ -2,8 +2,8 @@
   hosts: FRONTEND
   become: yes
   roles:
+  debug:
     - name: Load Frontend Role
-      debug:
       role: frontend
 
 
