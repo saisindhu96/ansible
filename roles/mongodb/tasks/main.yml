@@ -6,12 +6,21 @@
     enabled: yes
     gpgcheck: yes
     gpgkey: https://www.mongodb.org/static/pgp/server-4.2.asc
-    file: Mongodb
+    file: mongodb
 
-- name: Installing MongoDB
+- name: Install MongoDB
   yum:
     name: mongodb-org
     state: present
+
+- name: Update MongoDB Listen Address
+  notify:
+    - Restart MongoDB
+  ansible.builtin.replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+## Handlers will run at ending of the play
 
 - name: Start MongoDB service
   systemd:
@@ -19,8 +28,11 @@
     enabled: yes
     state: started
 
-- name: Update MongoDB Listen Address
-  ansible.builtin.replace:
-    path: /etc/mongod.conf
-    regexp: '127.0.0.1'
-    replace: '0.0.0.0'
+- name: Download Package
+  include_role:
+    name: common
+    tasks_from: download-from-github
+  vars:
+    APP_DIR: /tmp/mongodb-main
+    EXTRACT_DIR: /tmp
+
