@@ -23,5 +23,5 @@
   copy:
     src: /home/roboshop/catalogue-main
     dest: /home/roboshop/catalogue
-    remote_src:yes
+    remote_src: yes
 
