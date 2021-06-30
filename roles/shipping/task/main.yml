@@ -1,5 +1,0 @@
-- name: Print Component Name
-  debug:
-    msg: Component = Shipping
-
-
