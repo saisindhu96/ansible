@@ -21,7 +21,7 @@
 
 - name: Copy content to actual directory
   copy:
-    src: /home/roboshop/catalogue-main
-    dest: /home/roboshop/catalogue
+    src: /home/roboshop/catalogue-main/
+    dest: /home/roboshop/catalogue/
     remote_src: yes
 
