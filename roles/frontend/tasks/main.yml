@@ -22,10 +22,6 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
-- name: Update Nginx Main Config file
-  copy:
-    src: nginx.conf
-    dest: /etc/nginx/nginx.conf
 
 - name: Start Nignx
   ansible.builtin.systemd:
