@@ -30,5 +30,10 @@
     path: /home/roboshop/catalogue/
   become_user: roboshop
 
-- name: Update DNS Record in SystemD file
+- name: Copy SystemD file
+  copy:
+    src: catalogue
+    state: restarted
+    enabled: yes
+    daemon_reload: yes
 
