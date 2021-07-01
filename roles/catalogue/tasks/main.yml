@@ -33,8 +33,13 @@
 
 - name: Copy SystemD file
   copy:
-    src: catalogue
-    state: restarted
-    enabled: yes
-    daemon_reload: yes
+    src: systemd.services
+    dest: /etc/systemd/system/catalogue.services
+
+- name: Start MongoDB Service
+    systemd:
+      name: catalogue
+      state: restarted
+      enabled: yes
+      daemon_reload: yes
 
