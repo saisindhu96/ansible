@@ -25,8 +25,6 @@
     state: started
     enabled: yes
 
-
-
 - name: Grabbing Default Password
   shell: grep "A temporary password" /var/log/mysqld.log | awk '{print $NF}'
   register: MYSQL_DEFAULT_PASSWORD
