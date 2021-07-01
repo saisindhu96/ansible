@@ -31,14 +31,7 @@
     login_password: RoboShop@1
     query: show databases
   register: out
-
-- name: debug
-  debug:
-    msg: "{{out}}"
-
-- name: Grabbing Default Password
-  shell: grep "A temporary password" /var/log/mysqld.log | awk '{print $NF}'
-  register: MYSQL_DEFAULT_PASSWORD
+  ignore_errors: yes
 
 - name: Reset MySQL Password
   block:
