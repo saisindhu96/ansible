@@ -1,0 +1,9 @@
+- name: Demo on conditions
+  hosts: localhost
+  vars:
+    IS_RUN: false
+  tasks:
+    - name: Run based on user input
+      debug:
+        msg: Hello World
+      when: IS_RUN
