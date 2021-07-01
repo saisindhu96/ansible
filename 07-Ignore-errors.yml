@@ -1,0 +1,11 @@
+- name: Ingore_errors demo
+  hosts: localhost
+  tasks:
+    - name: Fail this task
+      fail:
+        msg: Failing for Demo
+      ignore_errors: yes
+
+    - name: Print Hello
+      debug:
+        msg: Hello
