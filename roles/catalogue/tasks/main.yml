@@ -37,9 +37,9 @@
     dest: /etc/systemd/system/catalogue.services
 
 - name: Start MongoDB Service
-    systemd:
-      name: catalogue
-      state: restarted
-      enabled: yes
-      daemon_reload: yes
+  systemd:
+    name: catalogue
+    state: restarted
+    enabled: yes
+    daemon_reload: yes
 
