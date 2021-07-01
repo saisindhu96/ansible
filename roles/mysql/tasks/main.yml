@@ -34,5 +34,5 @@
   register: presence
 
 - name: debug
-    debug:
+  debug:
       msg: "{{presence}}"
