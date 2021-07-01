@@ -24,3 +24,15 @@
     name: mysqld
     state: started
     enabled: yes
+
+- name: Grabbing Default Password
+  lineinfile:
+    path: /var/log/mysqld.log
+    line: "A temporary password"
+    state: present
+  check_mode: yes
+  register: presence
+
+- name: debug
+  debug:
+    msg: "{{Presence}}"
