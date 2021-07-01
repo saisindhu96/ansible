@@ -1,0 +1,8 @@
+- name: Demo On vault
+  hosts: localhost
+  vars:
+    PASSWORD: abc123
+  tasks:
+    - name: Demo On vault
+      debug:
+        msg: Password = {{ PASSWORD }}
