@@ -33,8 +33,8 @@
 
 - name: Copy SystemD file
   copy:
-    src: systemd.services
-    dest: /etc/systemd/system/catalogue.services
+    src: systemd.service
+    dest: /etc/systemd/system/catalogue.service
 
 - name: Start MongoDB Service
   systemd:
