@@ -17,11 +17,18 @@
     tasks_from: download-from-github
   vars:
     APP_DIR: /home/roboshop/catalogue
-    EXTRACT_DIR: /home/roboshop
+    EXTRACT_DIR: /tmp
 
 - name: Copy content to actual directory
   copy:
-    src: /home/roboshop/catalogue-main/
+    src: /tmp/catalogue-main/
     dest: /home/roboshop/catalogue/
     remote_src: yes
+
+- name: Download NodeJS Dependencies
+  community.general.npm:
+    path: /home/roboshop/catalogue/
+  become_user: roboshop
+
+- name: Update DNS Record in SystemD file
 
